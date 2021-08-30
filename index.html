@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+<body>
+    <form class="form" id="form">
+        <fieldset class="form-fieldset">
+            <legend>Form</legend>
+            <p>
+                <label for="first-name">First name:</label>
+                <input type="text" class="form-field" name="firstName" id="firstName" placeholder="First name"
+                    onfocusout="validateFirstName()">
+                <span class="helper-text"></span>
+            </p>
+            <p>
+                <label for="first_name">Last name:</label>
+                <input type="text" class="form-field" name="lastName" id="lastName" placeholder="Last name"
+                    onfocusout="validateLastName()">
+                <span class="helper-text"></span>
+            </p>
+            <p>
+                <label for="select">City:</label>
+                <select type="select" class="form-field select" id="select" name="city" required>
+                    <option value="Minsk">Minsk</option>
+                    <option value="Grodno">Grodno</option>
+                    <option value="Brest">Brest</option>
+                </select>
+                <span class="helper-text"></span>
+            </p>
+            <p class="radio-container">
+                <label class="radio-label">
+                    
+                    <input type="radio" name="sex" class="radio" id="radio-sex-woman" value="Woman" required>
+                    <span>Woman</span>
+                </label>
+                <label class="radio-label">
+                    
+                    <input type="radio" name="sex" class="radio" id="radio-sex-man" value="Man" required>
+                    <span>Man</span>
+                </label>
+            </p>
+            <span class="select-helper-text"></span>
+
+            <button type="submit" class="button" id="button">Send</button>
+        </fieldset>
+    </form>
+    <table>
+        <caption class="main__title">Information</caption>
+        <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>City</th>
+                <th>Sex</th>
+            </tr>
+        </thead>
+        <tbody class="table"></tbody>
+    </table>
+</body>
+<script src="script/script.js"></script>
+
+</html>
